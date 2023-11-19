@@ -6,9 +6,14 @@ import "../../styles.css";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { useDispatch } from "react-redux";
+import { setAuthUser } from "../../features/auth/authSlice";
+import { useCookies } from "react-cookie";
 
 export const Login = () => {
   const navigate = useNavigate();
+  const dispatch= useDispatch()
+  const [setCookie] = useCookies(['token']);
   const [authDetails, setAuthDetails] = useState({
     email: "",
     password: "",
@@ -31,6 +36,9 @@ export const Login = () => {
       console.log(user, "authResponse");
 
       if (user) {
+        dispatch(setAuthUser(user.email))
+        // setCookie("token", user.accessToken);
+      
         navigate("/dashboard");
       }
     } catch (error) {

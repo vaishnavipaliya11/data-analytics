@@ -1,5 +1,5 @@
 :root {
-    --primary-clr: #79589f;
+    --primary-clr: #1677ff;
     --secondary-clr: #79589fd9;
   
     --text-clr: hsl(193, 21%, 92%);
@@ -17,11 +17,20 @@
     display: flex;
     flex-direction: column;
 }
+.a-start{
+  align-items: flex-start;
+}
 .a-center{
     align-items: center;
 }
 .j-center{
     justify-content: center;
+}
+.j-bet{
+  justify-content: space-between;
+}
+.mar-sm{
+  margin: 1rem 0;
 }
 .cur-pointer{
     cursor: pointer;
@@ -29,6 +38,9 @@
 .common-box-shadow{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 0.8rem;
+}
+.sidebar-container{
+  margin: 1rem 0.5rem;
 }
 .white-bg{
   background-color: white;
@@ -39,34 +51,13 @@
 .border-sm{
   border-radius: 5px;
 }
-.btn-primary {
-    background-color: var(--primary-clr);
-    color: whitesmoke;
-    border-radius: 5px;
-    padding: 5px 8px;
-    border: none;
-    border: 1px solid var(--primary-clr);
-  }
-  .btn-primary:focus{
-    outline: none;
-  }
-  .btn-primary:hover {
-    cursor: pointer;
-    background-color: var(--secondary);
-  }
-
-  .btn-secondary {
-    background-color: #f8fafc;
-    color: var(--primary-clr);
-    border-radius: 5px;
-    padding: 5px 8px;
-    border: 2px solid var(--primary-clr);
-  }
-  .btn-secondary:hover {
-    cursor: pointer;
-    border: 2px solid var(--primary-clr);
-    background-color: #f1f5f9;
-  }
+.navbar-container{
+  background-color: var(--primary-clr);
+  padding: 0.5rem;
+}
+.navbar-container p{
+  color: var(--text-clr);
+}
 
 /* login */
 .login-container{
@@ -77,4 +68,16 @@
    display: flex;
    align-items: center;
    flex-direction: column;
+}
+
+.dashboard-container{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap:1rem
+}
+.feat-container{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem
 }

@@ -3,8 +3,12 @@ import { getData } from "./helpers/getData";
 
 const dataSlice = createSlice({
   name: "data",
-  initialState: { analyticsData: [], dataLoading: false },
-  reducers: {},
+  initialState: { analyticsData: [], dataLoading: false, selectedFeat: "A" },
+  reducers: {
+    setSelectedFeat: (state, action) => {
+      state.selectedFeat = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getData.pending, (state) => {
@@ -21,6 +25,6 @@ const dataSlice = createSlice({
   },
 });
 
-export const {} = dataSlice.actions;
+export const {setSelectedFeat} = dataSlice.actions;
 
 export default dataSlice.reducer;

@@ -33,3 +33,33 @@ export const SignUpForm = [
     message: "Please input your email!",
   },
 ];
+
+export const sideBarFilter = [
+  {
+    label: ">15",
+    type: "checkbox",
+    name: "lessThan15",
+  },
+  {
+    label: "15-25",
+    type: "checkbox",
+    name: "bet15",
+  },
+  {
+    label: ">25",
+    type: "checkbox",
+    name: "moreThan25",
+  },
+  {
+    label: "Male",
+    type: "checkbox",
+    name: "male",
+  },
+  {
+    label: "Female",
+    type: "checkbox",
+    name: "female",
+  },
+];
+
+export const features = ["A", "B", "C", "D", "E", "F"];
