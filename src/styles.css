@@ -6,6 +6,7 @@
     --brown-clr:#9e1327;
     --gray-clr: #94a3b8;
     --green-clr:#047857;
+    --bg-clr:#f4f5f6;
   }
 
 .common-flex{
@@ -28,6 +29,15 @@
 .common-box-shadow{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 0.8rem;
+}
+.white-bg{
+  background-color: white;
+}
+.pd-sm{
+  padding: 0.5rem;
+}
+.border-sm{
+  border-radius: 5px;
 }
 .btn-primary {
     background-color: var(--primary-clr);
@@ -61,6 +71,7 @@
 /* login */
 .login-container{
     height: 100vh;
+    background-color: var(--bg-clr);
 }
 .ant-form-item-control-input-content{
    display: flex;
